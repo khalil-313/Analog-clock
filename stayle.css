@@ -1,0 +1,80 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(https://images.unsplash.com/photo-1707595076244-da286485fc50?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-size:cover;
+  background-position:center;
+}
+.clock {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background-image: url(https://illustoon.com/photo/dl/5054.png);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.clock::before {
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-color: #222;
+  border-radius: 50%;
+  z-index: 4;
+}
+
+.hour {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  transform: rotateZ(90deg);
+}
+.hour::before {
+  position: absolute;
+  content: "";
+  width: 2px;
+  height: 100px;
+  background-color: #333;
+}
+.minute {
+  position: absolute;
+  width: 200px;
+  height: 275px;
+  display: flex;
+  justify-content: center;
+  transform: rotateZ(145deg);
+}
+.minute::before {
+  position: absolute;
+  content: "";
+  width: 2px;
+  height: 140px;
+  background-color:#333;
+}
+.secund {
+  width: 200px;
+  height: 280px;
+  display: flex;
+  justify-content: center;
+  transform: rotateZ(120 deg);
+}
+.secund::before {
+  content: "";
+  height: 170px;
+  width: 1px;
+  background-color:red;
+  position: absolute;
+  border-radius: 2px 2px 0 0;
+}
